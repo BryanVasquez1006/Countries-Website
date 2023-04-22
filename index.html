@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Links de bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  
+  <script src="./js/app.js" type="module" defer></script>
+  <title>Document</title>
+
+  <!-- FONT AWESOME LINKS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+
+<body>
+
+<!-- NAV BAR -->
+
+<header>
+    <nav class=" navBar container-fluid navbar bg-body-tertiary d-flex flex-row align-content- position-fixed">
+      <div class="ps-4">
+        <span class="navbar-brand mb-0 h1">Where in the world?</span>
+      </div>
+      <div class="darkMode pe-4 d-flex ">
+        <span class="material-symbols-outlined p">dark_mode</span>
+        <span class="ps-1">Dark Mode</span>
+      </div>
+    </nav>
+
+    <!-- NAV BAR -->
+
+
+    <!-- Search for a counrty button -->
+
+    <div class="container row ">
+        <div class="searchCountry mt-5 ms-5 bg-body-tertiary countrySelect col-xxl-8">
+
+          <div class="  d-flex  flex-row  pt-4">
+            <span class="material-symbols-outlined">
+          search</span>
+            <p class="mb-1 ps-3">Search by country...</p>
+
+          </div>
+
+        </div>
+        <!-- Search for a counrty button -->
+
+
+        <!-- FILTER BY REGION BOX -->
+        <div class="regionFilter mt-5 ms-5 bg-body-tertiary col col-sm-3 col-xxl-2  btn-secondary rounded-3" type="button" data-bs-toggle="dropdown">
+
+          <div class="  d-flex  flex-row justify-content-between pt-4">
+            <p class="mb-1 ps-3">Filter by region</p>
+            <span class="material-symbols-outlined">
+              keyboard_arrow_down
+              </span>
+          </div>
+          
+          
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Africa</a></li>
+            <li><a class="dropdown-item" href="#">America</a></li>
+            <li><a class="dropdown-item" href="#">Asia</a></li>
+            <li><a class="dropdown-item" href="#">Europe</a></li>
+            <li><a class="dropdown-item" href="#">Oceania</a></li>
+          </ul>
+        </div>
+      </header>
+  </div>  
+    <!-- FILTER BY REGION BOX -->
+
+
+
+<!-- CARDS DESPLEGADAS EN LA PAGINA WEB DESDE JS -->
+    <section id="countryCards" class=" row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex flex-col gap-5 ">
+      
+    </section>
+
+    <!-- CARDS DESPLEGADAS EN LA PAGINA WEB DESDE JS -->
+
+
+      
+      <!-- OFF CANVAS LOGISTIC -->
+      <div class="offcanvas offcanvas-top vh-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+        </div>
+
+        <!-- BACK BUTTON OFF CANVAS -->
+        <div class="offcanvas-body">
+          <div class="backButton border-1 border-dark bg-body-tertiary btn d-flex" data-bs-dismiss="offcanvas" aria-label="Close">
+            <span class="material-symbols-outlined">
+              arrow_back
+              </span>
+              <p>Back</p>
+          </div>
+
+
+          <!-- COMPLETE CARD OFF CANVAS -->
+
+          
+            <div class="countryCardCanvas container mt-5 ">
+             
+                <img src="https://picsum.photos/600/400" class="card-img-top" alt="Country IMG">
+
+                <div class="card-body">
+                  
+                  <h2>Germany</h2>
+                  <p class="fw-bold">Native Name:</p>
+                  <p class="fw-bold">Population:</p>
+                  <p class="fw-bold">Region:</p>
+                  <p class="fw-bold">Sub Region:</p>
+                  <p class="fw-bold">Capital:</p>
+
+                  <div class="middleInfo mt-5">
+                    <p>Top Level Domain</p>
+                    <p>Currencies</p>
+                    <p>Languages</p>
+                  </div>
+
+                  <div class="lastInfo mt-5">
+                    <h5>Border Countries:</h5>
+
+                    <div class="countrySuggestions d-flex justify-content-evenly text-center">
+                        <div class="borderCountries p-1 border border-black">France</div>
+                        <div class="borderCountries p-1 border border-black">Nether</div>
+                        <div class="borderCountries p-1 border border-black">Germany<div>
+                    </div>
+                
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+      
+
+       
+      </div>
+        <!-- OFF CANVAS LOGISTIC -->
+
+
+   
+
+
+
+  
+    
+
+</body>
+
+
+
+
+</html>

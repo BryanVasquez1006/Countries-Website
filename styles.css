@@ -1,0 +1,46 @@
+
+.navBar {
+    height:80px;
+    z-index: 1;
+ 
+}
+
+.searchCountry {
+    height: 80px;
+ 
+}
+
+.regionFilter {
+    height: 80px;
+    width: 250px;
+}
+
+.countryDropDown {
+    width: 250px;
+}
+
+.countryCard {
+    
+    width: 400px;
+    height: 300px;
+}
+
+.backButton {
+    width: 150px;
+}
+
+.borderCountries {
+    border: 1px solid white;
+    width: 150px;
+    height: 35px;
+}
+
+.flagPhoto {
+
+    width: 100%;
+}
+
+.flagPhoto img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
