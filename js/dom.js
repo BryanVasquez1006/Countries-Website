@@ -8,8 +8,8 @@ const countryCard = (obj) => {
     //INSERTANDO LOS ELEMENTOS DEL CARD
 
     div.innerHTML = `
-    <div class="countryCard container mt-5 "  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-        <div class="card border-0 bg-body-tertiary flagPhoto">
+    <div class="col  countryCard container mt-5 "  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop ">
+        <div class="card border-0 bg-body-tertiary flagPhoto ">
             <div class = "flagPhoto">
                 <img src="${obj.flags.svg}" class="card-img-top" alt="${obj.flags.alt}">
             </div>
@@ -19,7 +19,7 @@ const countryCard = (obj) => {
 
             <p class="fw-bold">Population: ${obj.population}</p>
             <p class="fw-bold">Region: ${obj.region}</p>
-            <p class="fw-bold">Capital: ${obj.capital[0]}</p>
+            <p class="fw-bold">Capital: ${obj.capital}</p>
         </div>
     </div>
   </div>
@@ -32,3 +32,4 @@ export default {
     countryCard,
     $
 }
+

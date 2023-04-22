@@ -24,8 +24,8 @@
 
 <!-- NAV BAR -->
 
-<header>
-    <nav class=" navBar container-fluid navbar bg-body-tertiary d-flex flex-row align-content- position-fixed">
+<section >
+    <nav class=" navBar container-fluid navbar bg-body-tertiary d-flex flex-row align-content  ">
       <div class="ps-4">
         <span class="navbar-brand mb-0 h1">Where in the world?</span>
       </div>
@@ -34,19 +34,19 @@
         <span class="ps-1">Dark Mode</span>
       </div>
     </nav>
-
+</section>
     <!-- NAV BAR -->
 
 
     <!-- Search for a counrty button -->
 
-    <div class="container row ">
+    <div class="container row">
         <div class="searchCountry mt-5 ms-5 bg-body-tertiary countrySelect col-xxl-8">
 
           <div class="  d-flex  flex-row  pt-4">
             <span class="material-symbols-outlined">
           search</span>
-            <p class="mb-1 ps-3">Search by country...</p>
+            <input class="mb-1 ps-3 form-control bg-transparent border-0 " placeholder="Search by country..." id="countryFilter">
 
           </div>
 
@@ -80,7 +80,7 @@
 
 
 <!-- CARDS DESPLEGADAS EN LA PAGINA WEB DESDE JS -->
-    <section id="countryCards" class=" row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex flex-col gap-5 ">
+    <section id="countryCards" class=" row row-cols-1 row-cols-md-3 row-cols-lg-3 d-flex  flex-col gap-5">
       
     </section>
 
