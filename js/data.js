@@ -18,8 +18,10 @@ const getCountries  = (data) => {
 }
 
 const filtrar = (arr, filtro) => {
-   let filtered = arr.filter(elem => elem.name.common === filtro)
+   let filtered = arr.filter(elem => elem.region === filtro)
+  console.log(filtered)
    return filtered;
+  
 }
 
 

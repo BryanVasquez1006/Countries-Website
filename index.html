@@ -40,13 +40,13 @@
 
     <!-- Search for a counrty button -->
 
-    <div class="container row">
+    <div class="container row justify-content-xxl-evenly">
         <div class="searchCountry mt-5 ms-5 bg-body-tertiary countrySelect col-xxl-8">
 
           <div class="  d-flex  flex-row  pt-4">
-            <span class="material-symbols-outlined">
-          search</span>
-            <input class="mb-1 ps-3 form-control bg-transparent border-0 " placeholder="Search by country..." id="countryFilter">
+            <button class=" material-symbols-outlined btn bg-transparent border-0" id="buscar">
+          search</button>
+            <input class="mb-1 ps-3 form-control bg-transparent border-0 " placeholder="Search by country..." id="countryInput">
 
           </div>
 
@@ -55,7 +55,7 @@
 
 
         <!-- FILTER BY REGION BOX -->
-        <div class="regionFilter mt-5 ms-5 bg-body-tertiary col col-sm-3 col-xxl-2  btn-secondary rounded-3" type="button" data-bs-toggle="dropdown">
+        <div class="regionFilter mt-5 ms-5 bg-body-tertiary col col-sm-3 col-xxl-2 d-flex  btn-secondary rounded-3" type="button" data-bs-toggle="dropdown">
 
           <div class="  d-flex  flex-row justify-content-between pt-4">
             <p class="mb-1 ps-3">Filter by region</p>
@@ -81,7 +81,7 @@
 
 
 <!-- CARDS DESPLEGADAS EN LA PAGINA WEB DESDE JS -->
-    <section id="countryCards" class=" row row-cols-1 row-cols-md-3 row-cols-lg-3 d-flex  flex-col gap-5">
+    <section id="countryCards" class=" row row-cols-1 row-cols-md-3 row-cols-lg-3 d-flex  flex-col gap-5 justify-content-evenly gx-5">
       
     </section>
 
@@ -102,52 +102,53 @@
               </span>
               <p>Back</p>
           </div>
-
-
-          <!-- COMPLETE CARD OFF CANVAS -->
-
           
-            <div class="countryCardCanvas container mt-5 ">
-             
-                <img src="https://picsum.photos/600/400" class="card-img-top" alt="Country IMG">
-
-                <div class="card-body">
-                  
-                  <h2>Germany</h2>
-                  <p class="fw-bold">Native Name:</p>
-                  <p class="fw-bold">Population:</p>
-                  <p class="fw-bold">Region:</p>
-                  <p class="fw-bold">Sub Region:</p>
-                  <p class="fw-bold">Capital:</p>
-
-                  <div class="middleInfo mt-5">
-                    <p>Top Level Domain</p>
-                    <p>Currencies</p>
-                    <p>Languages</p>
-                  </div>
-
-                  <div class="lastInfo mt-5">
+          
+          <!-- COMPLETE CARD OFF CANVAS -->
+          
+          
+          <div class="container mt-5 " id="countryCardCanvas">
+            
+            <img src="https://picsum.photos/600/400" class="card-img-top" alt="Country IMG">
+            
+            <div class="card-body">
+              
+              <h2>Germany</h2>
+              <p class="fw-bold">Native Name:</p>
+              <p class="fw-bold">Population:</p>
+              <p class="fw-bold">Region:</p>
+              <p class="fw-bold">Sub Region:</p>
+              <p class="fw-bold">Capital:</p>
+              
+              <div class="middleInfo mt-5">
+                <p>Top Level Domain</p>
+                <p>Currencies</p>
+                <p>Languages</p>
+              </div>
+              
+              <div class="lastInfo mt-5">
                     <h5>Border Countries:</h5>
-
+                    
                     <div class="countrySuggestions d-flex justify-content-evenly text-center">
-                        <div class="borderCountries p-1 border border-black">France</div>
-                        <div class="borderCountries p-1 border border-black">Nether</div>
-                        <div class="borderCountries p-1 border border-black">Germany<div>
+                      <div class="borderCountries p-1 border border-black">France</div>
+                      <div class="borderCountries p-1 border border-black">Nether</div>
+                      <div class="borderCountries p-1 border border-black">Germany<div>
+                      </div>
+                      
                     </div>
-                
+                    
+                    
                   </div>
-
-
                 </div>
               </div>
+              
+              
+              
             </div>
-      
-
-       
-      </div>
-        <!-- OFF CANVAS LOGISTIC -->
-
-
+          </div>
+            <!-- OFF CANVAS LOGISTIC -->
+            
+            
    
 
 
