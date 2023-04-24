@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-
+const countries = $("#countryCards");
 
 const countryCard = (obj) => {
     const div = document.createElement("div")
@@ -28,8 +28,26 @@ const countryCard = (obj) => {
    return div;
 }
 
+
+const showCards = (arr) => {
+
+        countries.innerHTML = ""
+
+    arr.forEach(element => {
+        const card = countryCard(element)
+    
+        //Agregando el card al elemento countryCard
+    
+        countries.appendChild(card)
+    })
+    
+}
+
+
+
 export default {
     countryCard,
-    $
+    $,
+    showCards
 }
 
