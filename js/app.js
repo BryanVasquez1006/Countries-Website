@@ -9,9 +9,15 @@ const countries = dom.$("#countryCards");
 const countryInput = document.getElementById("countryInput")
 const regionFilter = [...dom.$("#region").children]
 const searchIcon = document.getElementById("buscar")
-
+const html = document.getElementById("html")
+const darkMode = document.getElementById("darkModeBtn")
+console.log(html, darkMode)
 dom.showCards(datos)
 dom.offCanvas(datos)
+
+darkMode.addEventListener("click", () => {
+    html.dataset.bsTheme = html.dataset.bsTheme === "dark" ? "light" : "dark"
+})
 
 
 
@@ -24,6 +30,7 @@ countryInput.addEventListener("keyup", (e) => {
     console.log(enter)
    
 })
+
 
 
 

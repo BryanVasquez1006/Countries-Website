@@ -19,7 +19,7 @@ const countryCard = (obj) => {
 
                 <h2>${obj.name.common}</h2>
 
-                <p class="fw-bold">Population: ${obj.population}</p>
+                <p class="fw-bold">Population: ${obj.population.toLocaleString("en-US")}</p>
                 <p class="fw-bold">Region: ${obj.region}</p>
                 <p class="fw-bold">Capital: ${obj.capital}</p>
             </div>
@@ -38,11 +38,7 @@ const countryCard = (obj) => {
 const offcanvasCard = (obj) => {
     const div = document.createElement("div")
     div.className = "countryCardCanvas"
-    // const languages = obj.languages
-    // for (const key in languages){
-    //     let allLanguages = (key + ": " + languages[key])
-    //     console.log(allLanguages)
-    // }
+    
 
     div.innerHTML = `
     <div class="countryCardCanvas container mt-5 ">
@@ -59,7 +55,7 @@ const offcanvasCard = (obj) => {
                   <p class="fw-bold">Capital: ${obj.capital}</p>
 
                   <div class="middleInfo mt-5">
-                    <p class = "fw-bold">Top Level Domain: ${obj.tld}</p>
+                    <p class = "fw-bold">Top Level Domain:</p>
                     <p class = "fw-bold">Currencies:</p>
                     <p class = "fw-bold">Languages:</p>
                   </div>
