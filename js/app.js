@@ -11,14 +11,12 @@ const regionFilter = [...dom.$("#region").children]
 const searchIcon = document.getElementById("buscar")
 const html = document.getElementById("html")
 const darkMode = document.getElementById("darkModeBtn")
-console.log(html, darkMode)
 dom.showCards(datos)
 dom.offCanvas(datos)
 
 darkMode.addEventListener("click", () => {
     html.dataset.bsTheme = html.dataset.bsTheme === "dark" ? "light" : "dark"
 })
-
 
 
 let byCountry = "";
@@ -30,66 +28,3 @@ countryInput.addEventListener("keyup", (e) => {
     console.log(enter)
    
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let countryName = "";
-
-
-// datos.forEach(element => {
-//     const card = dom.countryCard(element)
-
-//     //Agregando el card al elemento countryCard
-
-//     countries.appendChild(card)
-// })
-
-
-
-// //Añadir los eventos a cada elemento de la region
-
-// regionFilter.forEach(region => {
-//     region.addEventListener("click", () => {
-        
-//         //Filtrar por categoria
-//         let filtro = region.textContent;
-
-//         const filtered  = data.filtrar(datos,filtro)
-//         console.log(filtered)
-        
-        
-        
-    
-//     })
-// })
-
-
-
-
-
-
-
-
-
-
-
-// countryFilter.addEventListener()
-
-
-

@@ -41,32 +41,32 @@ const offcanvasCard = (obj) => {
     
 
     div.innerHTML = `
-    <div class="countryCardCanvas container mt-5 ">
-             
-                <img src="${obj.flags.svg}" class="card-img-top" alt="${obj.flags.alt}">
-
-                <div class="card-body">
-                  
-                  <h2>${obj.name.common}</h2>
-                  <p class="fw-bold">Native Name:</p>
-                  <p class="fw-bold">Population: ${obj.population.toLocaleString("en-US")}</p>
-                  <p class="fw-bold">Region: ${obj.region} </p>
-                  <p class="fw-bold">Sub Region: ${obj.subregion}</p>
-                  <p class="fw-bold">Capital: ${obj.capital}</p>
-
-                  <div class="middleInfo mt-5">
+    <div class="countryCardCanvas container mt-5 row">
+                <div class ="col-xl-10"> 
+                   <img src="${obj.flags.svg}" class="card-img-top" alt="${obj.flags.alt}">
+                   <div class="card-body">
+                </div>
+                  <div class = "col-md-4 col-xl-6"">
+                      <h2>${obj.name.common}</h2>
+                      <p class="fw-bold">Native Name:</p>
+                      <p class="fw-bold">Population: ${obj.population.toLocaleString("en-US")}</p>
+                      <p class="fw-bold">Region: ${obj.region} </p>
+                      <p class="fw-bold">Sub Region: ${obj.subregion}</p>
+                      <p class="fw-bold">Capital: ${obj.capital}</p>
+                  </div>
+                  <div class="middleInfo mt-5 col-md-4 col-xl-4"">
                     <p class = "fw-bold">Top Level Domain:</p>
                     <p class = "fw-bold">Currencies:</p>
                     <p class = "fw-bold">Languages:</p>
                   </div>
 
-                  <div class="lastInfo mt-5">
+                  <div class="lastInfo mt-5 col-md-4 col-xl-2">
                     <h5>Border Countries:</h5>
 
-                    <div class="countrySuggestions d-flex justify-content-evenly text-center">
-                        <div class="borderCountries p-1 border border-black">France</div>
-                        <div class="borderCountries p-1 border border-black">Nether</div>
-                        <div class="borderCountries p-1 border border-black">Germany<div>
+                    <div class="countrySuggestions d-flex  flex-row ">
+                        <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">France</div>
+                        <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">Nether</div>
+                        <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">Germany<div>
                     </div>
                 
                   </div>
@@ -80,22 +80,9 @@ const offcanvasCard = (obj) => {
        
       </div>
     `
-  console.log(div)
+  
     return div
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //MOSTRAR LAS CARDS EN PANTALLA
@@ -127,7 +114,6 @@ arr.forEach(element => {
 })
 
 }
-
 
 
 export default {
