@@ -40,9 +40,9 @@ regionFilter.forEach(region => {
         const filtered  = filtro === "All" ? datos : data.filtrar(datos,filtro)
         
         dom.showCards(filtered)
+        
     })
 })
-
 
 
 

@@ -38,7 +38,9 @@ const countryCard = (obj) => {
 const offcanvasCard = (obj) => {
     const div = document.createElement("div")
     div.className = "countryCardCanvas"
-    
+    div.id = `${obj.fifa}`
+    // let [moneda] = Object.keys(obj.currencies)
+    // let [languages] = Object.keys(obj.languages)
 
     div.innerHTML = `
     <div class="countryCardCanvas container mt-5 row">
