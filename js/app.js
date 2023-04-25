@@ -20,10 +20,10 @@ darkMode.addEventListener("click", () => {
 })
 
 
-
+// AGREGANDO EL EVENTO KEYUP AL INPUT
 let byCountry = "";
 
-countryInput.addEventListener("keyup", (e) => {
+countryInput.addEventListener("change", (e) => {
    byCountry = countryInput.value;
    let enter = datos.filter(dato => dato.name.common.toLowerCase().includes(byCountry.toLowerCase()))
     dom.showCards(enter)
@@ -32,7 +32,18 @@ countryInput.addEventListener("keyup", (e) => {
 })
 
 
+// REGION FILTER
+regionFilter.forEach(region => {
+    region.addEventListener("click", () => {
+        
+        //Filtrar por categoria
+        let filtro = region.textContent;
 
+        const filtered  = filtro === "All" ? datos : data.filtrar(datos,filtro)
+        
+        dom.showCards(filtered)
+    })
+})
 
 
 
