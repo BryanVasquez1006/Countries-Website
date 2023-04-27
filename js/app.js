@@ -27,11 +27,11 @@ darkMode.addEventListener("click", () => {
 let byCountry = "";
 
 countryInput.addEventListener("change", (e) => {
-   byCountry = countryInput.value;
-   let enter = datos.filter(dato => dato.name.common.toLowerCase().includes(byCountry.toLowerCase()))
+    byCountry = countryInput.value;
+    let enter = datos.filter(dato => dato.name.common.toLowerCase().includes(byCountry.toLowerCase()))
     dom.showCards(enter)
 
-   
+
 })
 
 function addEventCards() {
@@ -43,22 +43,22 @@ function addEventCards() {
             let filtrar = data.filtrarPais(datos, card.id)
             dom.offCanvas(filtrar)
             console.log(filtrar)
-           
-           
+
+
         })
     })
 }
 
 regionFilter.forEach(region => {
     region.addEventListener("click", () => {
-        
+
         //Filtrar por categoria
         let filtro = region.textContent;
 
-        const filtered  = filtro === "All" ? datos : data.filtrar(datos,filtro)
-        
+        const filtered = filtro === "All" ? datos : data.filtrar(datos, filtro)
+
         dom.showCards(filtered)
-        
+
     })
 })
 

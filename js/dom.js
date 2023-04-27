@@ -9,7 +9,7 @@ const countryCard = (obj) => {
     const div = document.createElement("div")
     div.className = "countryCard prueba";
     div.id = obj.name.common;
-   
+
     //INSERTANDO LOS ELEMENTOS DEL CARD
 
     div.innerHTML = `
@@ -29,8 +29,8 @@ const countryCard = (obj) => {
         </div>
   </div>
     `
-// console.log(div)
-   return div;
+    // console.log(div)
+    return div;
 }
 
 
@@ -41,7 +41,7 @@ const countryCard = (obj) => {
 const offcanvasCard = (obj) => {
     const div = document.createElement("div")
     div.className = "countryCardCanvas"
-    
+
     // let [moneda] = Object.keys(obj.currencies)
     // let [languages] = Object.keys(obj.languages)
 
@@ -85,7 +85,7 @@ const offcanvasCard = (obj) => {
        
       </div>
     `
-  
+
     return div
 }
 
@@ -96,12 +96,12 @@ const showCards = (arr) => {
     countries.innerHTML = ""
     arr.forEach(element => {
         const card = countryCard(element)
-    
+
         //Agregando el card al elemento countryCard
-    
+
         countries.appendChild(card)
     })
-    
+
 }
 
 
@@ -111,13 +111,13 @@ const offCanvas = (arr) => {
 
     offcanvasContainer.innerHTML = ""
 
-arr.forEach(element => {
-    const card = offcanvasCard(element)
+    arr.forEach(element => {
+        const card = offcanvasCard(element)
 
-    //Agregando el card al elemento countryCard
+        //Agregando el card al elemento countryCard
 
-    offcanvasContainer.appendChild(card)
-})
+        offcanvasContainer.appendChild(card)
+    })
 
 }
 
