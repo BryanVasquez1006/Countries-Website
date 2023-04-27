@@ -1,17 +1,20 @@
 const $ = (selector) => document.querySelector(selector);
 const countries = $("#countryCards");
 const offcanvasContainer = document.getElementById("countryCardCanvas")
-console.log(offcanvasContainer)
+
+
+
 
 const countryCard = (obj) => {
     const div = document.createElement("div")
-    div.className = "countryCard"
-
+    div.className = "countryCard prueba";
+    div.id = obj.name.common;
+   
     //INSERTANDO LOS ELEMENTOS DEL CARD
 
     div.innerHTML = `
-    <div class="col  countryCard container mt-5 "  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop d-flex justify-content-center justify-content-evenly" id = ${obj.name.common}>
-        <div class="card border-0 bg-body-tertiary flagPhoto ">
+    <div class="col container mt-5 "  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop d-flex justify-content-center justify-content-evenly">
+        <div class=" card border-0 bg-body-tertiary flagPhoto ">
                 <div class = "flagPhoto">
                     <img src="${obj.flags.svg}" class="card-img-top" alt="${obj.flags.alt}">
                 </div>
@@ -38,7 +41,7 @@ const countryCard = (obj) => {
 const offcanvasCard = (obj) => {
     const div = document.createElement("div")
     div.className = "countryCardCanvas"
-    div.id = `${obj.fifa}`
+    
     // let [moneda] = Object.keys(obj.currencies)
     // let [languages] = Object.keys(obj.languages)
 
@@ -50,7 +53,7 @@ const offcanvasCard = (obj) => {
                 </div>
                   <div class = "col-md-4 col-xl-6"">
                       <h2>${obj.name.common}</h2>
-                      <p class="fw-bold">Native Name:</p>
+                      <p class="fw-bold">Native Name: ${obj.name.common}</p>
                       <p class="fw-bold">Population: ${obj.population.toLocaleString("en-US")}</p>
                       <p class="fw-bold">Region: ${obj.region} </p>
                       <p class="fw-bold">Sub Region: ${obj.subregion}</p>
@@ -90,8 +93,7 @@ const offcanvasCard = (obj) => {
 //MOSTRAR LAS CARDS EN PANTALLA
 const showCards = (arr) => {
 
-        countries.innerHTML = ""
-
+    countries.innerHTML = ""
     arr.forEach(element => {
         const card = countryCard(element)
     
@@ -101,6 +103,8 @@ const showCards = (arr) => {
     })
     
 }
+
+
 
 //MOSTRAR LAS CARDS EN OFF CANVAS 
 const offCanvas = (arr) => {
@@ -117,12 +121,12 @@ arr.forEach(element => {
 
 }
 
-
 export default {
     countryCard,
     $,
     showCards,
     offcanvasCard,
-    offCanvas
+    offCanvas,
+    offcanvasContainer
 }
 

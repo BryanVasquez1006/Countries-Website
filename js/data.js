@@ -24,9 +24,18 @@ const filtrar = (arr, filtro) => {
   
 }
 
+const filtrarPais = (arr, filtro) => {
+    let filtered = arr.filter(elem => elem.name.common === filtro)
+   console.log(filtered)
+    return filtered;
+   
+ }
+
+
 
 export default {
     getData,
     getCountries,
-    filtrar
+    filtrar,
+    filtrarPais
 }
