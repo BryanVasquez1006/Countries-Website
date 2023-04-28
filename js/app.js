@@ -13,7 +13,7 @@ const html = document.getElementById("html")
 const darkMode = document.getElementById("darkModeBtn")
 
 // console.log(obteniendoPaises)
-const obteniendoPaises = [...document.getElementsByClassName("countryCard")]
+
 dom.showCards(datos)
 addEventCards()
 
@@ -30,6 +30,7 @@ countryInput.addEventListener("change", (e) => {
     byCountry = countryInput.value;
     let enter = datos.filter(dato => dato.name.common.toLowerCase().includes(byCountry.toLowerCase()))
     dom.showCards(enter)
+    dom.offCanvas(enter)
 
 
 })
@@ -40,7 +41,7 @@ function addEventCards() {
     // REGION FILTER
     obteniendoPaises.forEach(card => {
         card.addEventListener("click", () => {
-            let filtrar = data.filtrarPais(datos, card.id)
+            let filtrar = data.filtrarPais(datos,card.id)
             dom.offCanvas(filtrar)
             console.log(filtrar)
 
@@ -51,13 +52,16 @@ function addEventCards() {
 
 regionFilter.forEach(region => {
     region.addEventListener("click", () => {
-
+    
         //Filtrar por categoria
         let filtro = region.textContent;
 
         const filtered = filtro === "All" ? datos : data.filtrar(datos, filtro)
 
-        dom.showCards(filtered)
+         dom.showCards(filtered)
+         addEventCards()
+         
+         
 
     })
 })

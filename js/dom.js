@@ -128,6 +128,6 @@ export default {
     showCards,
     offcanvasCard,
     offCanvas,
-    offcanvasContainer
+ 
 }
 
