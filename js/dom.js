@@ -63,7 +63,7 @@ const offcanvasCard = (obj) => {
                             <p class="fw-bold">Sub Region: ${obj.subregion}</p>
                             <p class="fw-bold">Capital: ${obj.capital}</p>
                             </div> 
-                            <div class = "">  
+                            <div class = "ms-lg-5">  
                             <div class="middleInfo mt-5">
                             <p class = "fw-bold">Top Level Domain:</p>
                             <p class = "fw-bold">Currencies:</p>
