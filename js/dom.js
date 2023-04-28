@@ -46,44 +46,45 @@ const offcanvasCard = (obj) => {
     // let [languages] = Object.keys(obj.languages)
 
     div.innerHTML = `
-    <div class="countryCardCanvas container mt-5 row">
-                <div class ="col-xl-10"> 
-                   <img src="${obj.flags.svg}" class="card-img-top" alt="${obj.flags.alt}">
-                   <div class="card-body">
-                </div>
-                  <div class = "col-md-4 col-xl-6"">
-                      <h2>${obj.name.common}</h2>
-                      <p class="fw-bold">Native Name: ${obj.name.common}</p>
-                      <p class="fw-bold">Population: ${obj.population.toLocaleString("en-US")}</p>
-                      <p class="fw-bold">Region: ${obj.region} </p>
-                      <p class="fw-bold">Sub Region: ${obj.subregion}</p>
-                      <p class="fw-bold">Capital: ${obj.capital}</p>
-                  </div>
-                  <div class="middleInfo mt-5 col-md-4 col-xl-4"">
-                    <p class = "fw-bold">Top Level Domain:</p>
-                    <p class = "fw-bold">Currencies:</p>
-                    <p class = "fw-bold">Languages:</p>
-                  </div>
+    <div class="countryCardCanvas container mt-5">
+        <div class = "row" > 
+           <div class = " col-md-6 ">
+             <img src="${obj.flags.svg}" class="card-img-top" alt="${obj.flags.alt}">
+           </div>
+            <div class="card-body col-md-4">
 
-                  <div class="lastInfo mt-5 col-md-4 col-xl-2">
-                    <h5>Border Countries:</h5>
-
-                    <div class="countrySuggestions d-flex  flex-row ">
-                        <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">France</div>
-                        <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">Nether</div>
-                        <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">Germany<div>
+                <div class = "col-md-6">
+                    <div class = "d-md-flex flex-row justify-content-evenly">
+                            <div class = "gap-5">                        
+                            <h2>${obj.name.common}</h2>
+                            <p class="fw-bold">Native Name: ${obj.name.common}</p>
+                            <p class="fw-bold">Population: ${obj.population.toLocaleString("en-US")}</p>
+                            <p class="fw-bold">Region: ${obj.region} </p>
+                            <p class="fw-bold">Sub Region: ${obj.subregion}</p>
+                            <p class="fw-bold">Capital: ${obj.capital}</p>
+                            </div> 
+                            <div class = "">  
+                            <div class="middleInfo mt-5">
+                            <p class = "fw-bold">Top Level Domain:</p>
+                            <p class = "fw-bold">Currencies:</p>
+                            <p class = "fw-bold">Languages:</p>
+                            </div> 
+                       </div> 
                     </div>
-                
-                  </div>
-                
+                     
+                    <div class="lastInfo mt-5 d-md-flex container">
+                        <h5 class = "pe-3 text-nowrap">Border Countries:</h5>
 
+                        <div class="countrySuggestions d-flex  flex-row gap-3">
+                            <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">France</div>
+                            <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">Nether</div>
+                            <div class="borderCountries p-1 border-dark border-2 bg-body-tertiary">Germany<div>
+                       </div>
+                    </div>
                 </div>
-              </div>
             </div>
-      
-
-       
-      </div>
+        </div>
+    </div>
     `
 
     return div
